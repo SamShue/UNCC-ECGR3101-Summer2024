@@ -18,6 +18,5 @@ int main(){
         } else {
             *p1out = 0x08; // 00001000 (LED off, pull-up enabled)
         }
-
     }
 }
