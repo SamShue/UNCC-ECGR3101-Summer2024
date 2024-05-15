@@ -1,3 +1,9 @@
-2024/05/14-10:39:24.617 58a8 Reusing MANIFEST C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Site Characteristics Database/MANIFEST-000001
-2024/05/14-10:39:24.617 58a8 Recovering log #3
-2024/05/14-10:39:24.617 58a8 Reusing old log C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Site Characteristics Database/000003.log 
+2024/05/15-13:57:34.645 4148 Log #3: 3 ops saved to Table #7 OK
+2024/05/15-13:57:34.648 4148 Archiving C:\Users\evilr\OneDrive\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Site Characteristics Database/000003.log: OK
+2024/05/15-13:57:34.663 4148 Log #6: 1 ops saved to Table #8 OK
+2024/05/15-13:57:34.664 4148 Archiving C:\Users\evilr\OneDrive\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Site Characteristics Database/000006.log: OK
+2024/05/15-13:57:34.664 4148 Table #4: 3 entries OK
+2024/05/15-13:57:34.664 4148 Table #7: 3 entries OK
+2024/05/15-13:57:34.664 4148 Table #8: 1 entries OK
+2024/05/15-13:57:34.667 4148 Archiving C:\Users\evilr\OneDrive\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Site Characteristics Database/MANIFEST-000001: OK
+2024/05/15-13:57:34.712 4148 **** Repaired leveldb C:\Users\evilr\OneDrive\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Site Characteristics Database; recovered 3 files; 668 bytes. Some data may have been lost. ****

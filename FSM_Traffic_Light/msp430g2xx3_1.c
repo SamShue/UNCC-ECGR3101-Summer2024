@@ -25,9 +25,9 @@ state_t runRedState(uint16_t seconds);
 state_t runYellowState(uint16_t seconds);
 state_t runGreenState(uint16_t seconds);
 
-void setGreenLed(bool enable);
-void setYellowLed(bool enable);
-void setRedLed(bool enable);
+static inline void setGreenLed(bool enable);
+static inline void setYellowLed(bool enable);
+static inline void setRedLed(bool enable);
 
 int main(void) {
     volatile uint16_t seconds = 0;
@@ -119,7 +119,7 @@ state_t runGreenState(uint16_t seconds){
     return nextState;
 }
 
-void setGreenLed(bool enable){
+static inline void setGreenLed(bool enable){
     if(enable){
         GREEN_LED_OUT_REG |= GREEN_LED_PIN;
     } else {
@@ -127,7 +127,7 @@ void setGreenLed(bool enable){
     }
 }
 
-void setYellowLed(bool enable){
+static inline void setYellowLed(bool enable){
     if(enable){
         YELLOW_LED_OUT_REG |= YELLOW_LED_PIN;
     } else {
@@ -135,7 +135,7 @@ void setYellowLed(bool enable){
     }
 }
 
-void setRedLed(bool enable){
+static inline void setRedLed(bool enable){
     if(enable){
         RED_LED_OUT_REG |= RED_LED_PIN;
     } else {
