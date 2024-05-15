@@ -1,2 +1,3 @@
-2024/05/14-10:36:48.293 b710 Creating DB C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\shared_proto_db\metadata since it was missing.
-2024/05/14-10:36:48.310 b710 Reusing MANIFEST C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\shared_proto_db\metadata/MANIFEST-000001
+2024/05/14-10:39:24.628 11e8c Reusing MANIFEST C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\shared_proto_db\metadata/MANIFEST-000001
+2024/05/14-10:39:24.628 11e8c Recovering log #3
+2024/05/14-10:39:24.629 11e8c Reusing old log C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\shared_proto_db\metadata/000003.log 
