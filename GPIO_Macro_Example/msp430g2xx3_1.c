@@ -1,4 +1,4 @@
-#define WDTCTL   *((unsigned int*) 0x0120)
+#define WDTCTL  *((unsigned int*) 0x0120)
 #define P1IN    *((unsigned char*) 0x020)
 #define P1OUT   *((unsigned char*) 0x021)
 #define P1DIR   *((unsigned char*) 0x022)
