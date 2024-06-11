@@ -34,7 +34,7 @@ int main(){
 
     volatile int count = 0;
     while(1){
-        if(isButtonPressed_NoDebounce()){
+        if(isButtonPressed_DelayDebounce()){
             count = count >= 2 ? 0 : count + 1;
         }
 
