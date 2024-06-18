@@ -1,3 +1,8 @@
-2024/05/23-15:34:34.110 51a4 Reusing MANIFEST C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Local Storage\leveldb/MANIFEST-000001
-2024/05/23-15:34:34.115 51a4 Recovering log #3
-2024/05/23-15:34:34.116 51a4 Reusing old log C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Local Storage\leveldb/000003.log 
+2024/06/13-08:51:14.598 8c3c Reusing MANIFEST C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Local Storage\leveldb/MANIFEST-000001
+2024/06/13-08:51:14.608 8c3c Recovering log #3
+2024/06/13-08:51:14.608 8c3c Level-0 table #3: started
+2024/06/13-08:51:14.611 8c3c Level-0 table #3: 32904 bytes OK
+2024/06/13-08:51:14.615 8c3c Delete type=0 #3
+2024/06/13-08:55:23.069 8d6c Level-0 table #6: started
+2024/06/13-08:55:23.072 8d6c Level-0 table #6: 28014 bytes OK
+2024/06/13-08:55:23.076 8d6c Delete type=0 #4

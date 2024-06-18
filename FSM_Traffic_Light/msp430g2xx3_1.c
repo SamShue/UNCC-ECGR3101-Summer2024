@@ -14,16 +14,8 @@
 #define RED_LED_DIR_REG     P1DIR
 #define RED_LED_OUT_REG     P1OUT
 
-typedef enum{
-    GREEN, YELLOW, RED
-} state_t;
-
 void init();
 void delay_s(uint16_t seconds);
-
-state_t runRedState(uint16_t seconds);
-state_t runYellowState(uint16_t seconds);
-state_t runGreenState(uint16_t seconds);
 
 static inline void setGreenLed(bool enable);
 static inline void setYellowLed(bool enable);
@@ -31,35 +23,50 @@ static inline void setRedLed(bool enable);
 
 int main(void) {
     volatile uint16_t seconds = 0;
-    state_t currentState = GREEN;
-    state_t nextState = currentState;
+    uint8_t currentState = 0;
+    uint8_t nextState = currentState;
 
     init();
 
     while(1) {
         switch(currentState){
-        case GREEN:
-            nextState = runGreenState(seconds);
+        case 0: // Green state
+            setRedLed(false);
+            setGreenLed(true);
+            setYellowLed(false);
+
+            if(seconds > 5){
+                seconds = 0;
+                nextState = 1;
+            }
             break;
-        case YELLOW:
-            nextState = runYellowState(seconds);
+        case 1: // Yellow state
+            setRedLed(false);
+            setGreenLed(false);
+            setYellowLed(true);
+
+            if(seconds > 2){
+                seconds = 0;
+                nextState = 2;
+            }
             break;
-        case RED:
-            nextState = runRedState(seconds);
+        case 2: // Red state
+            setRedLed(true);
+            setGreenLed(false);
+            setYellowLed(false);
+
+            if(seconds > 5){
+                seconds = 0;
+                nextState = 0;
+            }
             break;
         default:
             break;
         }
 
-        if(currentState != nextState) seconds = 0;
-
-        // Update state
-        currentState = nextState;
-
-        // Update seconds
+        currentState = nextState; // Update state
         delay_s(1);
-        seconds++;
-
+        seconds++; // Update seconds
     }
 }
 
@@ -71,52 +78,6 @@ void init(){
     GREEN_LED_DIR_REG |= GREEN_LED_PIN;
     YELLOW_LED_DIR_REG |= YELLOW_LED_PIN;
     RED_LED_DIR_REG |= RED_LED_PIN;
-}
-
-state_t runRedState(uint16_t seconds){
-    state_t nextState = RED;
-
-    // set output
-    setYellowLed(false);
-    setGreenLed(false);
-    setRedLed(true);
-
-    // next state logic
-    if(seconds > 5){
-        nextState = GREEN;
-    }
-
-    return nextState;
-}
-
-state_t runYellowState(uint16_t seconds){
-    state_t nextState = YELLOW;
-
-    // set output
-    setRedLed(false);
-    setGreenLed(false);
-    setYellowLed(true);
-    // next state logic
-    if(seconds > 2){
-        nextState = RED;
-    }
-
-    return nextState;
-}
-
-state_t runGreenState(uint16_t seconds){
-    state_t nextState = GREEN;
-
-    // set output
-    setGreenLed(true);
-    setRedLed(false);
-    setYellowLed(false);
-    // next state logic
-    if(seconds > 5){
-        nextState = YELLOW;
-    }
-
-    return nextState;
 }
 
 static inline void setGreenLed(bool enable){
