@@ -5,7 +5,14 @@ void initTimer(){
     // Configure Timer to use SMCLK in Up to CCR0 mode
     CCTL0 = CCIE;                 // CCR0 interrupt enabled
     CCR0 = 4167;                 // Count value for 1s delay @ 12kHz
-    TACTL = TASSEL_2 | MC_1;      // SMCLK, upmode
+    TACTL = TASSEL_2 | MC_1 | ID_2;      // SMCLK, upmode
+}
+
+void setFrequency(float hertz){
+    static const float CLOCK_PERIOD_HZ = 1000000.0/4.0;
+    volatile float period = 1.0 / (hertz * 2.0);
+    volatile uint16_t count = period * CLOCK_PERIOD_HZ;
+    CCR0 = count;
 }
 
 int main(void){
@@ -16,6 +23,8 @@ int main(void){
   P1DIR |= 0x01;                 // Set P1.0 to output direction
 
   __enable_interrupt();
+
+  setFrequency(4000.0);
 
   while(1){
   }
