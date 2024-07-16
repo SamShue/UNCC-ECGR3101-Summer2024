@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>TIMERS_Blink_SpecificFreq</name>
+	<name>TIMERS_Watchdog_Interval</name>
 	<comment></comment>
 	<projects>
 	</projects>

@@ -1,29 +1,30 @@
 #include <msp430.h>
 #include <stdint.h>
 
-void initClocks(){
-    // Configure SMCLK at 12 kHz
-    BCSCTL3 = LFXT1S_2;           // LFXT1 = VLO
-    IFG1 &= ~OFIFG;               // Clear OSCFault flag
-    BCSCTL2 = SELS | DIVS_0;      // SMCLK = LFXT1/1
-}
-
 void initTimer(){
     // Configure Timer to use SMCLK in Up to CCR0 mode
-    CCTL0 = CCIE;                 // CCR0 interrupt enabled
-    CCR0 = 18000;                 // Count value for 1.5s delay @ 12kHz
-    TACTL = TASSEL_2 | MC_1;      // SMCLK, countmode
+    CCTL0 = CCIE;                       // CCR0 interrupt enabled
+    CCR0 = 4167;                        // Count value for 1s delay @ 12kHz
+    TACTL = TASSEL_2 | MC_1 | ID_2;     // SMCLK, upmode, div/4
+}
+
+void setFrequency(float hertz){
+    static const float CLOCK_PERIOD_HZ = 1000000.0/4.0;
+    volatile float period = 1.0 / (hertz * 2.0);
+    volatile uint16_t count = period * CLOCK_PERIOD_HZ;
+    CCR0 = count;
 }
 
 int main(void){
-  WDTCTL = WDTPW + WDTHOLD;       // Stop watchdog timer
+  WDTCTL = WDTPW + WDTHOLD;             // Stop watchdog timer
 
-  initClocks();
   initTimer();
 
-  P1DIR |= 0x01;                 // Set P1.0 to output direction
+  P1DIR |= 0x01;                        // Set P1.0 to output direction
 
   __enable_interrupt();
+
+  setFrequency(4000.0);
 
   while(1){
   }
@@ -31,5 +32,5 @@ int main(void){
 
 #pragma vector=TIMER0_A0_VECTOR
 __interrupt void Timer_A (void){
-    P1OUT ^= 0x01;               // Toggle P1.0 using exclusive-OR
+    P1OUT ^= 0x01;                      // Toggle P1.0 using exclusive-OR
 }

@@ -5,7 +5,7 @@
 #include "songs.h"
 
 void initGpio();
-void initTimerA0()
+void initTimerA0();
 bool isButtonPressed();
 
 void delay_ms(uint64_t delayTime);
@@ -24,7 +24,6 @@ void initTimerA0(){
     CCR0 = 4167;                         // Count value for 1s delay @ 12kHz
     TACTL = TASSEL_2 | MC_1 | ID_2;      // SMCLK, upmode
 }
-
 
 int main(void)
 {
