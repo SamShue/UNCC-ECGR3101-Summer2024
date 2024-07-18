@@ -1,32 +1,18 @@
-2024/07/16-14:38:32.791 8964 Reusing MANIFEST C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Local Storage\leveldb/MANIFEST-000001
-2024/07/16-14:38:32.797 8964 Recovering log #22
-2024/07/16-14:38:32.797 8964 Level-0 table #26: started
-2024/07/16-14:38:32.801 8964 Level-0 table #26: 18096 bytes OK
-2024/07/16-14:38:32.803 8964 Delete type=0 #22
-2024/07/16-14:45:11.673 2b30 Level-0 table #29: started
-2024/07/16-14:45:11.677 2b30 Level-0 table #29: 22723 bytes OK
-2024/07/16-14:45:11.679 2b30 Delete type=0 #27
-2024/07/16-14:46:38.202 8b80 Level-0 table #31: started
-2024/07/16-14:46:38.205 8b80 Level-0 table #31: 18244 bytes OK
-2024/07/16-14:46:38.207 8b80 Delete type=0 #28
-2024/07/16-14:47:18.176 2b30 Level-0 table #33: started
-2024/07/16-14:47:18.180 2b30 Level-0 table #33: 18801 bytes OK
-2024/07/16-14:47:18.182 2b30 Delete type=0 #30
-2024/07/16-14:47:18.182 2b30 Compacting 4@0 + 1@1 files
-2024/07/16-14:47:18.185 2b30 Generated table #34@0: 12 keys, 14679 bytes
-2024/07/16-14:47:18.185 2b30 Compacted 4@0 + 1@1 files => 14679 bytes
-2024/07/16-14:47:18.187 2b30 compacted to: files[ 0 1 0 0 0 0 0 ]
-2024/07/16-14:47:18.187 2b30 Delete type=2 #24
-2024/07/16-14:47:18.187 2b30 Delete type=2 #26
-2024/07/16-14:47:18.187 2b30 Delete type=2 #29
-2024/07/16-14:47:18.187 2b30 Delete type=2 #31
-2024/07/16-14:47:18.187 2b30 Delete type=2 #33
-2024/07/16-15:08:54.628 825c Level-0 table #36: started
-2024/07/16-15:08:54.632 825c Level-0 table #36: 19089 bytes OK
-2024/07/16-15:08:54.634 825c Delete type=0 #32
-2024/07/16-15:09:12.864 183c Level-0 table #38: started
-2024/07/16-15:09:12.867 183c Level-0 table #38: 19286 bytes OK
-2024/07/16-15:09:12.869 183c Delete type=0 #35
-2024/07/16-15:10:33.885 17a0 Level-0 table #40: started
-2024/07/16-15:10:33.888 17a0 Level-0 table #40: 19256 bytes OK
-2024/07/16-15:10:33.890 17a0 Delete type=0 #37
+2024/07/17-23:05:07.443 e890 Reusing MANIFEST C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Local Storage\leveldb/MANIFEST-000001
+2024/07/17-23:05:07.451 e890 Recovering log #39
+2024/07/17-23:05:07.451 e890 Reusing old log C:\Users\evilr\Documents\GitHub\UNCC-ECGR3101-Summer2024\.jxbrowser.userdata\Default\Local Storage\leveldb/000039.log 
+2024/07/17-23:06:15.627 80e0 Level-0 table #43: started
+2024/07/17-23:06:15.631 80e0 Level-0 table #43: 19119 bytes OK
+2024/07/17-23:06:15.634 80e0 Delete type=0 #39
+2024/07/17-23:06:15.634 80e0 Compacting 4@0 + 1@1 files
+2024/07/17-23:06:15.637 80e0 Generated table #44@0: 12 keys, 14182 bytes
+2024/07/17-23:06:15.637 80e0 Compacted 4@0 + 1@1 files => 14182 bytes
+2024/07/17-23:06:15.639 80e0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/07/17-23:06:15.639 80e0 Delete type=2 #34
+2024/07/17-23:06:15.639 80e0 Delete type=2 #36
+2024/07/17-23:06:15.639 80e0 Delete type=2 #38
+2024/07/17-23:06:15.639 80e0 Delete type=2 #40
+2024/07/17-23:06:15.639 80e0 Delete type=2 #43
+2024/07/17-23:12:22.215 80e0 Level-0 table #46: started
+2024/07/17-23:12:22.220 80e0 Level-0 table #46: 22880 bytes OK
+2024/07/17-23:12:22.222 80e0 Delete type=0 #42
